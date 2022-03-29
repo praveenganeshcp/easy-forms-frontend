@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: yellow;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.justify-start {
+    justify-content: flex-start;
+}
+.justify-end {
+    justify-content: flex-end;
+}
+.justify-around {
+    justify-content: space-around;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.column-flex-box {
+    flex-direction: column;
+}
