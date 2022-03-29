@@ -1,1 +1,6 @@
-<p>app-header works!</p>
+<header class="app-header flex-box justify-start">
+    <h3>{{commonService.getAppName()}}</h3>
+    <nav class="app-header__navbar flex-box">
+        <a class="app-header__link" *ngFor="let menu of getMenus()" [routerLink]="menu.link">{{ menu?.view }}</a>
+    </nav>
+</header>

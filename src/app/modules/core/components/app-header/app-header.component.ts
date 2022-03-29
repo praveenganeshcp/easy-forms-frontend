@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from 'src/app/services/common-service/common.service';
 
 @Component({
   selector: 'app-app-header',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppHeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public commonService: CommonService) { }
 
   ngOnInit(): void {
+  }
+
+  getMenus(): {view: string, link: string}[] {
+    return [
+      { view: 'Home', link: '' },
+      { view: 'Trash', link: '' },
+      { view: 'Profile', link: '' }
+    ]
   }
 
 }
