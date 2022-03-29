@@ -12,7 +12,10 @@ import { ViewFormCardComponent } from './components/view-form-card/view-form-car
 import { CreateFormCardComponent } from './components/create-form-card/create-form-card.component';
 import { TrashedFormCardComponent } from './components/trashed-form-card/trashed-form-card.component';
 import { GlobalFormPropsComponent } from './components/global-form-props/global-form-props.component';
+import { StoreModule } from '@ngrx/store';
+import { formReducer } from './store/form/reducers';
 
+const formStateKey = 'form';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { GlobalFormPropsComponent } from './components/global-form-props/global-
   ],
   imports: [
     CommonModule,
-    CoreRoutingModule
+    CoreRoutingModule,
+    StoreModule.forFeature(formStateKey, formReducer),
   ]
 })
 export class CoreModule { }
