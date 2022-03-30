@@ -1,1 +1,9 @@
-<p>form-list works!</p>
+<section class="form-list">
+    <section *ngIf="getFormList() | async as formList" class="form-list-data">
+        <h1>{{formList?.isLoading}}</h1>
+        <h1 *ngIf="formList?.error; else formElements">{{formList?.error}}</h1>
+        <ng-template #formElements>
+            <article *ngFor="let form of formList?.data">{{form.getNo()}}</article>
+        </ng-template>
+    </section>
+</section>

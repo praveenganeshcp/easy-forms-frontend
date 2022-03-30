@@ -1,5 +1,5 @@
 import { createAction, props } from "@ngrx/store";
-import { Form } from "../../models/form.entity";
+import { Form } from "../models/form.entity";
 
 export const FORM_ACTIONS = {
     LOAD_FORM_LIST : createAction('LOAD_FORM_LIST'),

@@ -1,7 +1,7 @@
 import { Action, createReducer, on } from "@ngrx/store";
+import { cloneDeep } from 'lodash';
 import { FORM_ACTIONS } from "./actions";
 import { FormState } from "./state";
-import { cloneDeep } from 'lodash';
 
 const initialFormState: FormState = {
     list: {

@@ -13,7 +13,9 @@ import { CreateFormCardComponent } from './components/create-form-card/create-fo
 import { TrashedFormCardComponent } from './components/trashed-form-card/trashed-form-card.component';
 import { GlobalFormPropsComponent } from './components/global-form-props/global-form-props.component';
 import { StoreModule } from '@ngrx/store';
-import { formReducer } from './store/form/reducers';
+import { EffectsModule } from '@ngrx/effects';
+import { FormEffects } from './store/effects';
+import { formReducer } from './store/reducers';
 
 const formStateKey = 'form';
 
@@ -34,6 +36,7 @@ const formStateKey = 'form';
     CommonModule,
     CoreRoutingModule,
     StoreModule.forFeature(formStateKey, formReducer),
+    EffectsModule.forFeature([ FormEffects ]),
   ]
 })
 export class CoreModule { }
