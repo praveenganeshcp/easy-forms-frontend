@@ -1,0 +1,12 @@
+$whiteShade : rgb(250, 231, 231, 0.7);
+$blackShade: rgb(128, 128, 128, 0.7);
+$blurValue: 10px;
+$negativeOffset: -5px;
+$positiveOffset: 5px;
+
+@mixin neu-outside($offset1: $negativeOffset, $offset2: $positiveOffset, $blur: $blurValue, $color1 : $whiteShade, $color2 : $blackShade) {
+    box-shadow: $offset1 $offset1 $blur $color1, $offset2 $offset2 $blur $color2;
+}
+@mixin neu-inside($offset1: $positiveOffset, $offset2: $negativeOffset, $blur: $blurValue, $color1 : $whiteShade, $color2 : $blackShade) {
+    box-shadow: $offset1 $offset1 $blur $color2 inset, $offset2 $offset2 12px $color1 inset;
+}

@@ -1,1 +1,20 @@
-<p>landing works!</p>
+<main class="landing">
+    <header class="landing-header flex-box justify-end">
+        <a class="landing-header__link">Signin</a>
+        <a class="landing-header__link">Create account</a>
+    </header>
+    <section class="landing-banner flex-box column-flex-box">
+        <h1 class="landing-banner__title">{{ commonService.getAppName() }}</h1>
+        <h3 class="landing-banner__slogan">{{ commonService.getAppSlogan() }}</h3>
+    </section>
+    <section class="landing-feature flex-box">
+        <article class="landing-feature__card flex-box column-flex-box" *ngFor="let feature of getFeatureList()">
+            <mat-icon>{{ feature.iconName }}</mat-icon>
+            <h1>{{ feature.name }}</h1>
+            <p>{{ feature.description }}</p>
+        </article>
+    </section>
+    <footer class="landing-footer flex-box">
+        <a class="landing-footer__link">Get Started</a>
+    </footer>
+</main>

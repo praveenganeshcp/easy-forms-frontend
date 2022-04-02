@@ -10,4 +10,8 @@ export class CommonService {
   getAppName(): string {
     return 'Easy forms';
   }
+
+  getAppSlogan() : string {
+    return 'Create forms, collect data and export it at ease';
+  }
 }
