@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from 'src/app/services/common/common.service';
 
 @Component({
   selector: 'app-account-shell',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountShellComponent implements OnInit {
 
-  constructor() { }
+  constructor(public commonService: CommonService) { }
 
   ngOnInit(): void {
   }

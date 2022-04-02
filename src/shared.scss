@@ -10,3 +10,19 @@ $positiveOffset: 5px;
 @mixin neu-inside($offset1: $positiveOffset, $offset2: $negativeOffset, $blur: $blurValue, $color1 : $whiteShade, $color2 : $blackShade) {
     box-shadow: $offset1 $offset1 $blur $color2 inset, $offset2 $offset2 12px $color1 inset;
 }
+
+.button {
+    padding: 3% 6%;
+    background-color: inherit;
+    font-weight: bold;
+    border: none;
+    @include neu-outside;
+}
+.primary-button {
+    @extend .button;
+    color: blue;
+}
+.danger-button {
+    @extend .button;
+    color: red;
+}

@@ -1,2 +1,8 @@
-<p>account-shell works!</p>
-<router-outlet></router-outlet>
+<main class="account-shell">
+    <header class="account-shell__header flex-box justify-between">
+        <h2>{{ commonService.getAppName() }}</h2>
+    </header>
+    <section class="account-shell__outlet">
+        <router-outlet></router-outlet>
+    </section>
+</main>
