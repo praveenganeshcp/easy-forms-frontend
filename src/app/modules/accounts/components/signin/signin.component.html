@@ -2,8 +2,16 @@
     <section class="login__card">
         <form class="login__form flex-box column-flex-box">
             <h2>SIGN-IN</h2>
-            <input autofocus placeholder="Email" autocomplete="off" class="login__form-field" />
-            <input placeholder="Password" autocomplete="off" class="login__form-field" type="email" />
+            <div class="login__form__field">
+                <app-form-field iconName="email" id="mailId" labelName="Email">
+                    <input autofocus autocomplete="off" />
+                </app-form-field>
+            </div>
+            <div class="login__form__field">
+                <app-form-field iconName="lock" id="password" labelName="Password">
+                    <input type="password" autocomplete="off" />
+                </app-form-field>
+            </div>
             <a class="forgot-password-link">Forgot password ?</a>
             <button class="primary-button">LOGIN</button>
             <p class="redirect-action-link">Don't have an account ? <a>Create here</a></p>

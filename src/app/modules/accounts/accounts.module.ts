@@ -7,6 +7,7 @@ import { SigninComponent } from './components/signin/signin.component';
 import { AccountShellComponent } from './pages/account-shell/account-shell.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { PasswordResetComponent } from './pages/password-reset/password-reset.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { PasswordResetComponent } from './pages/password-reset/password-reset.co
   ],
   imports: [
     CommonModule,
+    SharedModule,
     AccountsRoutingModule
   ]
 })
