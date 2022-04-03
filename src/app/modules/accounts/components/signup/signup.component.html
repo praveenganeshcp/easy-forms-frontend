@@ -4,17 +4,17 @@
             <h2>CREATE ACCOUNT</h2>
             <div class="signin__form__field">
                 <app-form-field iconName="person" id="userName" labelName="Username">
-                    <input autofocus autocomplete="off" />
+                    <input type="text" name="userName" autofocus autocomplete="off" />
                 </app-form-field>
             </div>
             <div class="signin__form__field">
                 <app-form-field iconName="email" id="mailId" labelName="Email">
-                    <input autofocus autocomplete="off" />
+                    <input name="mailId" type="email" autofocus autocomplete="off" />
                 </app-form-field>
             </div>
             <div class="signin__form__field">
                 <app-form-field iconName="lock" id="password" labelName="Password">
-                    <input type="password" autocomplete="off" />
+                    <input name="password" type="password" autocomplete="off" />
                 </app-form-field>
             </div>
             <button class="primary-button">CREATE ACCOUNT</button>
