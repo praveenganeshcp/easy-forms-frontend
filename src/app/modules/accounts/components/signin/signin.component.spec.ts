@@ -1,25 +1,62 @@
+import { DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 
 import { SigninComponent } from './signin.component';
 
 describe('SigninComponent', () => {
-  let component: SigninComponent;
   let fixture: ComponentFixture<SigninComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ SigninComponent ]
-    })
-    .compileComponents();
-  });
+  let component: SigninComponent;
+  let template: DebugElement;
 
   beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [ SigninComponent, ]
+    }).compileComponents();
+
     fixture = TestBed.createComponent(SigninComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    template = fixture.debugElement;
+  })
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  function getElement(queryString: string) {
+    return template.query(By.css(queryString)).nativeElement;
+  }
+
+  it('should render signin form title', () => {
+    let formTitle: HTMLHeadingElement = getElement('.login__form h2');
+    expect(formTitle).toBeInstanceOf(HTMLHeadingElement);
+    expect(formTitle.innerHTML).toBe('SIGN-IN');
+  })
+
+  it('should render input field to specify email', () => {
+    let emailField: HTMLInputElement = getElement(".login__form input[type='email']");
+    expect(emailField).toBeInstanceOf(HTMLInputElement);
+    expect(emailField.name).toBe('email');
+  })
+
+  it('should render input field to specify password', () => {
+    let passwordField: HTMLInputElement = getElement(".login__form input[type='password']");
+    expect(passwordField).toBeInstanceOf(HTMLInputElement);
+    expect(passwordField.name).toBe('password');
+  })
+
+  it('should render button to perform login action', () => {
+    let loginBtn: HTMLButtonElement = getElement('.login__form button');
+    expect(loginBtn).toBeInstanceOf(HTMLButtonElement);
+    expect(loginBtn.innerText).toBe('LOGIN');
+  })
+
+  it('should provide link to forgot password', () => {
+    let forgotPasswordLink: HTMLAnchorElement = getElement('.forgot-password-link');
+    expect(forgotPasswordLink).toBeInstanceOf(HTMLAnchorElement);
+    expect(forgotPasswordLink.innerHTML).toBe('Forgot password ?');
+  })
+
+  it('should provide link to signup page', () => {
+    let signinPageLink: HTMLAnchorElement = getElement('.redirect-action-link a');
+    expect(signinPageLink).toBeInstanceOf(HTMLAnchorElement);
+    expect(signinPageLink.innerText).toBe('Create here');
+  })
+
 });

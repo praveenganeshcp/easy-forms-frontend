@@ -4,12 +4,12 @@
             <h2>SIGN-IN</h2>
             <div class="login__form__field">
                 <app-form-field iconName="email" id="mailId" labelName="Email">
-                    <input autofocus autocomplete="off" />
+                    <input name="email" type="email" autofocus autocomplete="off" />
                 </app-form-field>
             </div>
             <div class="login__form__field">
                 <app-form-field iconName="lock" id="password" labelName="Password">
-                    <input type="password" autocomplete="off" />
+                    <input name="password" type="password" autocomplete="off" />
                 </app-form-field>
             </div>
             <a class="forgot-password-link" routerLink="/accounts/forgot-password">Forgot password ?</a>
