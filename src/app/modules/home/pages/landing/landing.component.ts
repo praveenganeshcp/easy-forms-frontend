@@ -13,6 +13,19 @@ export class LandingComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getHeaderLinks(): { name: string, routeLink: string }[] {
+    return [
+      {
+        name: 'Login',
+        routeLink: '/accounts/login',
+      },
+      {
+        name: 'Create Account',
+        routeLink: '/accounts/create-account',
+      }
+    ]
+  }
+
   getFeatureList(): { name: string, description: string, iconName: string }[] {
     return [
       {

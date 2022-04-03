@@ -1,7 +1,6 @@
 <main class="landing">
     <header class="landing-header flex-box justify-end">
-        <a class="landing-header__link">Signin</a>
-        <a class="landing-header__link">Create account</a>
+        <a *ngFor="let link of getHeaderLinks()" class="landing-header__link" [routerLink]="link.routeLink">{{ link.name }}</a>
     </header>
     <section class="landing-banner flex-box column-flex-box">
         <h1 class="landing-banner__title">{{ commonService.getAppName() }}</h1>
@@ -15,6 +14,6 @@
         </article>
     </section>
     <footer class="landing-footer flex-box">
-        <a class="landing-footer__link">Get Started</a>
+        <a routerLink="/accounts/create-account" class="landing-footer__link">Get Started</a>
     </footer>
 </main>

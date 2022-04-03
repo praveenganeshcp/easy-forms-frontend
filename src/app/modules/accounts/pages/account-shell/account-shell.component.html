@@ -1,6 +1,6 @@
 <main class="account-shell">
     <header class="account-shell__header flex-box justify-between">
-        <h2>{{ commonService.getAppName() }}</h2>
+        <a class="account-shell__header-link" routerLink="/">{{ commonService.getAppName() }}</a>
     </header>
     <section class="account-shell__outlet">
         <router-outlet></router-outlet>
