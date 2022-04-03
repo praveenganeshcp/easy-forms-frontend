@@ -1,0 +1,23 @@
+@import '../../../../../shared.scss';
+
+
+.signin {
+    width: 100%;
+    height: 100%;
+}
+.signin__card {
+    width: 30%;
+    height: 90%;
+}
+.signin__form {
+    width: 100%;
+    height: 100%;
+}
+.signin__form__field {
+    width: 100%;
+    height: 15%;
+    margin-top: 2%;
+}
+.redirect-action-link {
+    margin-top: 3%;
+}
