@@ -1,0 +1,29 @@
+@import '../../../../../shared.scss';
+
+.form-field {
+    width: 100%;
+    height: 100%;
+    @include neu-inside(5px, -5px, 8px);
+    padding: 2% 3%;
+}
+.form-field__label {
+    width: 100%;
+    height: 50%;
+}
+.form-field__placeholder {
+    margin-left: 1%;
+}
+.form-field__control{
+    width: 100%;
+    height: 50%;
+}
+.form-field__control ::ng-deep input {
+    height: 70%;
+    width: 90%;
+    border-radius: 5px;
+    border: none;
+    background-color: inherit;
+}
+.form-field__control ::ng-deep input:focus {
+    outline: none;
+}
