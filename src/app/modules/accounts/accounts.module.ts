@@ -9,6 +9,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { PasswordResetComponent } from './components/password-reset/password-reset.component';
 import { SharedModule } from '../shared/shared.module';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { AccountService } from './services/account/account.service';
+import { AccountDataSourceService } from './services/account-data-source/account-data-source.service';
 
 
 @NgModule({
@@ -24,6 +26,9 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
     CommonModule,
     SharedModule,
     AccountsRoutingModule
+  ],
+  providers: [
+    AccountService, AccountDataSourceService,
   ]
 })
 export class AccountsModule { }
