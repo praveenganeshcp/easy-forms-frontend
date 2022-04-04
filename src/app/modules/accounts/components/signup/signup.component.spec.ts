@@ -24,27 +24,27 @@ describe('SignupComponent', () => {
   }
 
   it('should render form title', () => {
-    let formTitle: HTMLElement = getElement('.signin__form h2');
+    let formTitle: HTMLElement = getElement('.signup__form h2');
     expect(formTitle.innerText).toBe('CREATE ACCOUNT');
   })
 
   it('should render input field to specify user name', () => {
-    let userNameField: HTMLInputElement = getElement(".signin__form input[name='userName']");
+    let userNameField: HTMLInputElement = getElement(".signup__form input[name='userName']");
     expect(userNameField).toBeInstanceOf(HTMLInputElement);
   })
 
   it('should render input field to specify email-id', () => {
-    let emailField: HTMLInputElement = getElement(".signin__form input[name='mailId']");
+    let emailField: HTMLInputElement = getElement(".signup__form input[name='mailId']");
     expect(emailField).toBeInstanceOf(HTMLInputElement);
   })
 
   it('should render input field to specify password', () => {
-    let passwordField: HTMLInputElement = getElement(".signin__form input[name='password']");
+    let passwordField: HTMLInputElement = getElement(".signup__form input[name='password']");
     expect(passwordField).toBeInstanceOf(HTMLInputElement);
   })
 
   it('should render button to create the account', () => {
-    let signinBtn: HTMLButtonElement = getElement('.signin__form button');
+    let signinBtn: HTMLButtonElement = getElement('.signup__form button');
     expect(signinBtn).toBeInstanceOf(HTMLButtonElement);
     expect(signinBtn.innerText).toBe('CREATE ACCOUNT');
   })
