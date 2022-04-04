@@ -30,15 +30,13 @@ describe('SigninComponent', () => {
   })
 
   it('should render input field to specify email', () => {
-    let emailField: HTMLInputElement = getElement(".login__form input[type='email']");
+    let emailField: HTMLInputElement = getElement(".login__form input[name='email']");
     expect(emailField).toBeInstanceOf(HTMLInputElement);
-    expect(emailField.name).toBe('email');
   })
 
   it('should render input field to specify password', () => {
-    let passwordField: HTMLInputElement = getElement(".login__form input[type='password']");
+    let passwordField: HTMLInputElement = getElement(".login__form input[name='password']");
     expect(passwordField).toBeInstanceOf(HTMLInputElement);
-    expect(passwordField.name).toBe('password');
   })
 
   it('should render button to perform login action', () => {
@@ -50,13 +48,13 @@ describe('SigninComponent', () => {
   it('should provide link to forgot password', () => {
     let forgotPasswordLink: HTMLAnchorElement = getElement('.forgot-password-link');
     expect(forgotPasswordLink).toBeInstanceOf(HTMLAnchorElement);
-    expect(forgotPasswordLink.innerHTML).toBe('Forgot password ?');
+    expect(forgotPasswordLink.getAttribute('routerLink')).toBe('/accounts/forgot-password');
   })
 
   it('should provide link to signup page', () => {
     let signinPageLink: HTMLAnchorElement = getElement('.redirect-action-link a');
     expect(signinPageLink).toBeInstanceOf(HTMLAnchorElement);
-    expect(signinPageLink.innerText).toBe('Create here');
+    expect(signinPageLink.getAttribute('routerLink')).toBe('/accounts/create-account');
   })
 
 });
