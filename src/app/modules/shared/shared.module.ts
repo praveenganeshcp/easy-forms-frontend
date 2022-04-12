@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { FormFieldComponent } from './components/form-field/form-field.component';
 import { CommonService } from './services/common/common.service';
+import { WarningPromptComponent } from './components/warning-prompt/warning-prompt.component';
 
 
 @NgModule({
   declarations: [
-    FormFieldComponent
+    FormFieldComponent,
+    WarningPromptComponent
   ],
   imports: [
     CommonModule,
