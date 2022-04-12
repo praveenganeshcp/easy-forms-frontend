@@ -3,23 +3,21 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ViewFormCardComponent } from './view-form-card.component';
 
 describe('ViewFormCardComponent', () => {
-  let component: ViewFormCardComponent;
-  let fixture: ComponentFixture<ViewFormCardComponent>;
+  it('should display unique form no', () => {})
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ ViewFormCardComponent ]
-    })
-    .compileComponents();
-  });
+  it('should display form name', () => {})
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ViewFormCardComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  it('should display the created on timestamp', () => {})
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  it('should display total number of responses submitted', () => {})
+
+  it('should display the live URL of the form', () => {})
+
+  it('should provide option to deactivate if the form is in active state', () => {})
+
+  it('should provide option to activate the form if the form is in inactive state', () => {})
+
+  it('should provide an option to move the form to trash', () => {})
+  
+  it('should provide the link to see the form configuration', () => {})
 });

@@ -3,23 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CreateFormCardComponent } from './create-form-card.component';
 
 describe('CreateFormCardComponent', () => {
-  let component: CreateFormCardComponent;
-  let fixture: ComponentFixture<CreateFormCardComponent>;
+  it('should display name or icon to indicate create form action', () => {})
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ CreateFormCardComponent ]
-    })
-    .compileComponents();
-  });
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(CreateFormCardComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  it('should open create new form dialog when clicking on this card', () => {})
 });
