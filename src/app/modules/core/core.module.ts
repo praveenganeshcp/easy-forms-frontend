@@ -16,6 +16,8 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { FormEffects } from './store/effects';
 import { formReducer } from './store/reducers';
+import { SharedModule } from '../shared/shared.module';
+import { CreateNewFormComponent } from './components/create-new-form/create-new-form.component';
 
 const formStateKey = 'form';
 
@@ -31,10 +33,12 @@ const formStateKey = 'form';
     CreateFormCardComponent,
     TrashedFormCardComponent,
     GlobalFormPropsComponent,
+    CreateNewFormComponent,
   ],
   imports: [
     CommonModule,
     CoreRoutingModule,
+    SharedModule,
     StoreModule.forFeature(formStateKey, formReducer),
     EffectsModule.forFeature([ FormEffects ]),
   ]
