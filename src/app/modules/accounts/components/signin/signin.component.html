@@ -1,15 +1,15 @@
 <section class="login flex-box">
     <section class="login__card">
-        <form class="login__form flex-box column-flex-box">
+        <form [formGroup]="getLoginForm()" class="login__form flex-box column-flex-box">
             <h2>SIGN-IN</h2>
             <div class="login__form-field">
-                <app-form-field iconName="email" id="mailId" labelName="Email">
-                    <input name="email" type="email" autofocus autocomplete="off" />
+                <app-form-field iconName="email" [formField]="getMaidIdControl()" id="mailId" labelName="Email">
+                    <input name="email" formControlName="mailId" type="email" autofocus autocomplete="off" />
                 </app-form-field>
             </div>
             <div class="login__form-field">
-                <app-form-field iconName="lock" id="password" labelName="Password">
-                    <input name="password" type="password" autocomplete="off" />
+                <app-form-field iconName="lock" [formField]="getPasswordControl()" id="password" labelName="Password">
+                    <input name="password" formControlName="password" type="pasword" autocomplete="off" />
                 </app-form-field>
             </div>
             <a class="forgot-password-link" routerLink="/accounts/forgot-password">Forgot password ?</a>

@@ -7,9 +7,13 @@
     padding: 2% 3%;
     border-radius: 10px;
 }
-.form-field__label {
-    width: 100%;
+.form-field__label-errmsg {
     height: 50%;
+    width: 100%;
+}
+.form-field__label {
+    width: 50%;
+    height: 100%;
 }
 .form-field__placeholder {
     margin-left: 1%;
@@ -19,7 +23,7 @@
     height: 50%;
 }
 .form-field__control ::ng-deep input {
-    height: 70%;
+    height: 90%;
     width: 90%;
     border-radius: 5px;
     border: none;
@@ -27,4 +31,8 @@
 }
 .form-field__control ::ng-deep input:focus {
     outline: none;
+}
+.form-field__error-msg {
+    color: red;
+    font-size: 12px;
 }

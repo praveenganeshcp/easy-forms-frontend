@@ -1,8 +1,11 @@
 <section class="form-field flex-box column-flex-box">
-    <label [for]="getId()" class="form-field__label flex-box justify-start">
-        <mat-icon>{{ getIconName() }}</mat-icon>
-        <span class="form-field__placeholder">{{ getLabelName() }}</span>
-    </label>
+    <div class="form-field__label-errmsg flex-box justify-between">
+        <label [for]="getId()" class="form-field__label flex-box justify-start">
+            <mat-icon>{{ getIconName() }}</mat-icon>
+            <span class="form-field__placeholder">{{ getLabelName() }}</span>
+        </label>
+        <p *ngIf="getFormControl()?.errors" class="form-field__error-msg">{{getErrorMessageIfInvalid()}}</p>
+    </div>
     <section class="form-field__control flex-box justify-start">
         <ng-content></ng-content>
     </section>

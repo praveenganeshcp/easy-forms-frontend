@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AccountDataSourceService } from '../../services/account-data-source/account-data-source.service';
-import { AccountService } from '../../services/account/account.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CustomValidators } from 'src/app/modules/shared/validators';
 
 @Component({
   selector: 'app-signin',
@@ -9,9 +9,27 @@ import { AccountService } from '../../services/account/account.service';
 })
 export class SigninComponent implements OnInit {
 
-  constructor() { }
+  private loginForm: FormGroup;
+  constructor(private formBuilder: FormBuilder) { 
+    this.loginForm = this.formBuilder.group({
+      mailId: this.formBuilder.control('', [ Validators.required, Validators.email ]),
+      password: this.formBuilder.control('', [ Validators.required, Validators.minLength(8), CustomValidators.StrongPassword ])
+    })
+  }
 
   ngOnInit(): void {
+  }
+
+  getLoginForm() {
+    return this.loginForm;
+  }
+
+  getMaidIdControl() {
+    return this.getLoginForm().controls['mailId'];
+  }
+
+  getPasswordControl() {
+    return this.getLoginForm().controls['password'];
   }
 
 }
