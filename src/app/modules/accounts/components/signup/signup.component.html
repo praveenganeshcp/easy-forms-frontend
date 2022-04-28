@@ -1,20 +1,20 @@
 <section class="signup flex-box">
     <section class="signup__card">
-        <form class="signup__form flex-box column-flex-box">
+        <form [formGroup]="getSignupFormGroup()" class="signup__form flex-box column-flex-box">
             <h2>CREATE ACCOUNT</h2>
             <div class="signup__form-field">
-                <app-form-field iconName="person" id="userName" labelName="Username">
-                    <input type="text" name="userName" autofocus autocomplete="off" />
+                <app-form-field [formField]="getUserNameControl()" iconName="person" id="userName" labelName="Username">
+                    <input type="text" formControlName="userName" name="userName" autofocus autocomplete="off" />
                 </app-form-field>
             </div>
             <div class="signup__form-field">
-                <app-form-field iconName="email" id="mailId" labelName="Email">
-                    <input name="mailId" type="email" autofocus autocomplete="off" />
+                <app-form-field [formField]="getEmailIdControl()" iconName="email" id="mailId" labelName="Email">
+                    <input name="mailId" formControlName="emailId" type="email" autofocus autocomplete="off" />
                 </app-form-field>
             </div>
             <div class="signup__form-field">
-                <app-form-field iconName="lock" id="password" labelName="Password">
-                    <input name="password" type="password" autocomplete="off" />
+                <app-form-field [formField]="getPasswordControl()" iconName="lock" id="password" labelName="Password">
+                    <input name="password" formControlName="password" type="password" autocomplete="off" />
                 </app-form-field>
             </div>
             <button class="primary-button">CREATE ACCOUNT</button>

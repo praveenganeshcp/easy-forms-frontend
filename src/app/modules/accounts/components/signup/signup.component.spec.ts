@@ -55,4 +55,18 @@ describe('SignupComponent', () => {
     expect(loginPageLink.getAttribute('routerLink')).toBe('/accounts/login');
   })
 
+  it('should display error message if email field is not filled and the form is submitted', () => {})
+
+  it('should display error message if invalid email value is entered', () => {})
+
+  it('should display error message when the email already exist', () => {})
+
+  it('should display error message if username field is not filled and the form is submitted', () => {})
+
+  it('should display error message if username value is < 3 chars or > 30 chars', () => {})
+
+  it('should display error message if password field is not filled and the form is submitted', () => {})
+
+  it('should display error message if the password is not matcing constraints', () => {})
+
 });
